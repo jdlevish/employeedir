@@ -42,6 +42,14 @@ export default function Home() {
     return (
         <div>
             <h1>Employee List</h1>
+            <h3>Click A Button Below To Filter Employees By Department</h3>
+            <button type='submit' onClick={() => {
+                setSearchState({
+                    search: 'full',
+                    department: 'all'
+
+                })
+            }}>Full List</button>
             <button type='submit' onClick={() => {
                 setSearchState({
                     search: 'department',
@@ -66,6 +74,12 @@ export default function Home() {
                     department: 'logistics'
                 })
             }}>Logistics</button>
+            <button type='submit' onClick={() => {
+                setSearchState({
+                    search: 'department',
+                    department: 'alphabetic'
+                })
+            }}>sort a-z</button>
 
 
 
